@@ -1,0 +1,99 @@
+# This is a program to store new vehicle inventory and assist with monthly payments
+
+
+# Create variable of your favorite car brand
+name = 'Schills Fords'
+print (name)
+# Create list of 5 of their models from cheapest to most expensive
+models = ['Escape', 'Mustang', 'Bronco', 'Ranger', 'F-150']
+print (models)
+# Append a 6th model to the list
+models.append ('GT')
+print (models)
+# Create list of 5 standard colors for all models
+colors = ['White', 'Blue', 'Green', 'Red', 'Yellow']
+print (colors)
+# Replace your last color with a different color
+models[0] = 'Fiesta'
+print (models)
+# Create variable of the current new year models
+year = "2024"
+names = "Escape", "Mustang", "Bronco", "Ranger", "F-150", "GT"
+full_name = f"{year} {names}"
+print(full_name)
+# Create MSRP constant number (not string) of each of the models
+MSRP0 = ('Escape - $29,495')
+MSRP1 = ('Mustang - $30,920')
+MSRP2 = ('Bronco - $39,130')
+MSRP3 = ('Ranger - $41,220')
+MSRP4 = ('F-150 - $56,400')
+MSRP5 = ('GT - $1,700,000')
+MSRPS = (f"{MSRP0} {MSRP1} {MSRP2} {MSRP3} {MSRP4} {MSRP5}")
+print(MSRPS)
+# Create a constant number (not string) for total months in 4yr, 5yr, and 6yr loans)
+LOANS = ("Loan Option 1 - 48 months\nLoan Option 2 - 60 Months\nLoan Option 3 - 72 Months")
+print (LOANS)
+# Create a variable for the guest's name. Be courteous in your upcoming messages :)
+greeting = "Hello,"
+first_name = "First_Name"
+last_name = "Last_Name!"
+full_greeting = (f"{greeting} {first_name} {last_name}")
+print (full_greeting)
+# Create message variable (with f-string) welcoming customer to your new car store
+message = "Valued customer,\nWe are so excited to have you here!\nWe hope to give you a cur-buying experience rivaled by none!\nAllow our experienced care prossionals know how they may assist you."
+print (message)
+# Create awesome banner with your brand/name/dealership, however you want to welcome customers
+banner = " _______  _______  __   __  ___   ___      ___      _______    _______  _______  ______    ______   _______\n"\
+         "|       ||       ||  | |  ||   | |   |    |   |    |       |  |       ||       ||    _ |  |      | |       |\n"\
+         "|  _____||       ||  |_|  ||   | |   |    |   |    |  _____|  |    ___||   _   ||   | ||  |  _    ||  _____|\n"\
+         "| |_____ |       ||       ||   | |   |    |   |    | |_____   |   |___ |  | |  ||   |_||_ | | |   || |_____ \n"\
+         "|_____  ||      _||       ||   | |   |___ |   |___ |_____  |  |    ___||  |_|  ||    __  || |_|   ||_____  |\n"\
+         " _____| ||     |_ |   _   ||   | |       ||       | _____| |  |   |    |       ||   |  | ||       | _____| |\n"\
+         "|_______||_______||__| |__||___| |_______||_______||_______|  |___|    |_" "______||___|  |_||______| |_______|\n"
+# Print awesome banner and welcome message
+print (banner)
+# Using title methods, print the number vehicles in alphabetical order, with the year and available colors.
+option0= {f'{year} {models[0]}: {colors}'}
+option1= {f'{year} {models[1]}: {colors}'}
+option2= {f'{year} {models[2]}: {colors}'}
+option3= {f'{year} {models[3]}: {colors}'}
+option4= {f'{year} {models[4]}: {colors}'}
+option5= {f'{year} {models[5]}: {colors}'}
+print (option0, option1, option2, option3, option4, option5)
+# Create a variable that calculates a monthly payment (no interest) for 5yr/60months for the first vehicle
+monthly_payment = {f'{option0}{'is $5,899 yearly for 5 years or $491.59 monthly for 60 months.'}'}
+
+# and print that in a nice, kind message. Don't be rude/pushy to the customer :)
+message = {f'{'Customer, the monthly payment estimate for the'}{monthly_payment}'}
+print (message)
+# Do the same thing, but give them 4yr and 6yr options for the same vehicle
+monthly_payment2 = {f'{option0}{'is $7,373.35 yearly for 4 years or $614.48 monthly for 48 months.'}'}
+monthly_payment3 = {f'{option0}{'is 4,915.84 yearly for 6 years or $409.65 monthly for 72 months.'}'}
+message2 = {f'{'Customer, the monthly payment estimate for the'}{monthly_payment2}'}
+message3 = {f'{'Customer, the monthly payment estimate for the'}{monthly_payment3}'}
+print (message2)
+print (message3)
+# Lastly, give them a 5yr option for each of the other vehicles, just to see if they are interested
+mustang_monthly_payment = {f'{option1}{'is $6,184 yearly for 5 years or $515.34 monthly for 60 months.'}'}
+bronco_monthly_payment = {f'{option2}{'is $7,826 yearly for 5 years or $652.17 monthly for 60 months.'}'}
+ranger_monthly_payment = {f'{option3}{'is $8,244 yearly for 5 years or $687 monthly for 60 months.'}'}
+f150_monthly_payment = {f'{option4}{'is $11,280 yearly for 5 years or $940 monthly for 60 months.'}'}
+gt_monthly_payment = {f'{option5}{'is $340,000 yearly for 5 years or $28,333.34 monthly for 60 months.'}'}
+mustang_message = {f'{'Customer, the monthly payment estimate for the'}{mustang_monthly_payment}'}
+bronco_message = {f'{'Customer, the monthly payment estimate for the'}{bronco_monthly_payment}'}
+ranger_message = {f'{'Customer, the monthly payment estimate for the'}{ranger_monthly_payment}'}
+f150_message = {f'{'Customer, the monthly payment estimate for the'}{f150_monthly_payment}'}
+gt_message = {f'{'Customer, the monthly payment estimate for the'}{gt_monthly_payment}'}
+# Additional Feature 1
+
+bottom_banner ="_______  __   __  _______  __    _  ___   _    __   __  _______  __   __    _______  _______  ______      __   __  _______  __   __  ______      _______  __   __  _______  ___   __    _  _______  _______  _______  __ \n"\
+               "|       ||  | |  ||   _   ||  |  | ||   | | |  |  | |  ||       ||  | |  |  |       ||       ||    _ |    |  | |  ||       ||  | |  ||    _ |    |  _    ||  | |  ||       ||   | |  |  | ||       ||       ||       ||  |\n"\
+               "|_     _||  |_|  ||  |_|  ||   |_| ||   |_| |  |  |_|  ||   _   ||  | |  |  |    ___||   _   ||   | ||    |  |_|  ||   _   ||  | |  ||   | ||    | |_|   ||  | |  ||  _____||   | |   |_| ||    ___||  _____||  _____||  | \n"\
+                " |   |  |       ||       ||       ||      _|  |       ||  | |  ||  |_|  |  |   |___ |  | |  ||   |_||_   |       ||  | |  ||  |_|  ||   |_||_   |       ||  |_|  || |_____ |   | |       ||   |___ | |_____ | |_____ |  | \n"\
+                 "|   |  |       ||       ||  _    ||     |_   |_     _||  |_|  ||       |  |    ___||  |_|  ||    __  |  |_     _||  |_|  ||       ||    __  |  |  _   | |       ||_____  ||   | |  _    ||    ___||_____  ||_____  ||__| \n"\
+                 "|   |  |   _   ||   _   || | |   ||    _  |    |   |  |       ||       |  |   |    |       ||   |  | |    |   |  |       ||       ||   |  | |  | |_|   ||       | _____| ||   | | | |   ||   |___  _____| | _____| | __ \n"\
+                 "|___|  |__| |__||__| |__||_|  |__||___| |_|    |___|  |_______||_______|  |___|    |_______||___|  |_|    |___|  |_______||_______||___|  |_|  |_______||_______||_______||___| |_|  |__||_______||_______||_______||__|\n"
+print (bottom_banner)
+# Additional Feature 2
+combination = {f'{'If you purchase two vehicles, you could qualify for a $500 rebate'}{option0}{'+'}{option1}{'='}{'$1,000 rebate!'}'}
+print (combination)
