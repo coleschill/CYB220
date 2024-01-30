@@ -1,0 +1,317 @@
+# Pizzas
+pizzas = 'pepperoni', 'cheese', 'sausage'
+for pizza in pizzas:
+    print((f'{pizza.title()}, is the best!'), ('But any pizza is still my favorite food.'))
+# Animals
+animals = 'dog', 'wolf', 'fox'
+for animal in animals:
+    print((f'I would love to pet a {animal.title()}.'), ('They are so soft!'))
+# Numbers
+numbers = ('1', '2', '3' , '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20')
+for number in numbers:
+    print(f"Cole you are number {number.title()}!")
+millions = list(range(1,1000001))
+for million in millions:
+    print(million)
+smallest_number = min(millions)
+print(smallest_number)
+largest_number = max(millions)
+print(largest_number)
+millions_sum = sum(millions)
+print(millions_sum)
+# Odds
+odd_numbers = list(range(1, 21, 2))
+for number in odd_numbers:
+    print(number)
+# Threes
+threes = list(range(3, 30, 3))
+for three in threes:
+    print(three)
+# Cubes
+cubes = []
+for value in range(1, 11):
+    cubes.append(value ** 3)
+print(cubes)
+# Cubes 2
+cubes = [value ** 3 for value in range(1, 11)]
+print(cubes)
+# First three pizzas
+pizzas = 'pepperoni', 'cheese', 'sausage', 'mushroom', 'ham', 'peppers', 'deep dish', 'bacon', 'chicken'
+print('The first three items in the list are:')
+for pizza in pizzas:
+    print(pizza.title())
+# Middle pizzas
+print('Three items from the middle of the list are:')
+for pizza in pizzas[3:6]:
+    print(pizza.title())
+# Last three pizzas
+print('The first three items in the list are:')
+for pizza in pizzas:
+    print(pizza.title())
+# Middle pizzas
+print('The last three items in the list are:')
+for pizza in pizzas[6:9]:
+    print(pizza.title())
+# My Pizzas
+my_pizzas = 'pepperoni', 'cheese', 'sausage', 'chicken'
+# Friend's Pizzas
+friends_pizzas = 'pepperoni', 'cheese', 'sausage', 'mushroom'
+
+print('My favorite pizzas are')
+for pizza in my_pizzas:
+    print(pizza)
+
+print("My friend's favorite pizzas are")
+for friend in friends_pizzas:
+    print(friend)
+# More Loops
+for pizza in my_pizzas:
+    print(pizza)
+for friend in friends_pizzas:
+    print(friend)
+
+# Buffet
+foods = ('fried chicken', 'steak', 'salad', 'potatoes', 'ice cream')
+for food in foods:
+    print(food)
+foods[0:1] = 'brisket'
+for food in foods:
+    print(food)
+# Modified food
+modified_foods = ('brisket', 'roast beef', 'salad', 'potatoes', 'ice cream')
+for foods in modified_foods:
+    print(foods)
+# My Pizzas
+my_pizzas = 'pepperoni', 'cheese', 'sausage', 'chicken'
+# Friend's Pizzas
+friends_pizzas = 'pepperoni', 'cheese', 'sausage', 'mushroom'
+
+print('My favorite pizzas are')
+for pizza in my_pizzas:
+    print(pizza)
+
+print("My friend's favorite pizzas are")
+for friend in friends_pizzas:
+    print(friend)
+# More Loops
+for pizza in my_pizzas:
+    print(pizza)
+for friend in friends_pizzas:
+    print(friend)
+
+# Buffet
+foods = ('fried chicken', 'steak', 'salad', 'potatoes', 'ice cream')
+for food in foods:
+    print(food)
+# Modified food
+modified_foods = ('brisket', 'roast beef', 'salad', 'potatoes', 'ice cream')
+for foods in modified_foods:
+    print(foods)
+
+# 5-1
+teams = 'Vikings'
+print("is teams == 'Vikings'? I predict true.")
+print(teams == 'Vikings')
+
+teams = 'Broncos'
+print("is teams == 'Broncos'? I predict true.")
+print(teams == 'Broncos')
+
+teams = '49ers'
+print("is teams == '49ers'? I predict true.")
+print(teams == '49ers')
+
+teams = 'Steelers'
+print("is teams == 'Steelers'? I predict true.")
+print(teams == 'Steelers')
+
+teams = 'Lions'
+print("is teams == 'Lions'? I predict true.")
+print(teams == 'Lions')
+
+print("\n is team == 'Chiefs'? I predict false.")
+print(teams == 'Chiefs')
+
+print("is team == 'Falcons'? I predict false.")
+print(teams == 'Falcons')
+
+print("is team == 'Panthers'? I predict false.")
+print(teams == 'Panthers')
+
+print("is team == 'Packers'? I predict false.")
+print(teams == 'Packers')
+
+print("is team == 'Buccaneers'? I predict false.")
+print(teams == 'Buccaneers')
+
+# 5-2
+colors = ['red', 'green', 'orange']
+current_color = 'white'
+if current_color not in colors:
+    print(f"{current_color} is not in the list of colors.")
+else:
+    print (f"{current_color} is in the list of colors.")
+
+current_color = 'red'
+if current_color not in colors:
+    print(f"{current_color} is not in the list of colors.")
+else:
+    print (f"{current_color} is in the list of colors.")
+
+# 5-3
+alien_color = 'green'
+if alien_color == 'green':
+    print('You have earned 5 points!')
+
+# 5-4
+alien_color = 'green'
+if alien_color == 'green':
+    print('You have earned 5 points!')
+else:
+    print('You have just earned 10 points!')
+
+alien_color = 'yellow'
+if alien_color == 'green':
+    print('You have earned 5 points!')
+else:
+    print('You have just earned 10 points!')
+
+# 5-5
+alien_color = 'green'
+if alien_color == 'green':
+    print('You have earned 5 points!')
+elif alien_color == 'yellow':
+    print('You have just earned 10 points!')
+else:
+    print('You have just earned 15 points!')
+
+alien_color = 'yellow'
+if alien_color == 'green':
+    print('You have earned 5 points!')
+elif alien_color == 'yellow':
+    print('You have just earned 10 points!')
+else:
+    print('You have just earned 15 points!')
+
+alien_color = 'red'
+if alien_color == 'green':
+    print('You have earned 5 points!')
+elif alien_color == 'yellow':
+    print('You have just earned 10 points!')
+else:
+    print('You have just earned 15 points!')
+
+# 5-6
+age = 24
+if age < 2 and age > 0:
+    print('You are a baby.')
+elif age >= 2 and age < 4:
+    print('You are a toddler.')
+elif age >= 4 and age < 13:
+    print('You are a kid.')
+elif age >= 13 and age < 20:
+    print('You are a teenager.')
+elif age >= 20 and age < 65:
+    print('You are an adult.')
+else:
+    print('You are a senior.')
+
+age = 12
+if age < 2 and age > 0:
+    print('You are a baby.')
+elif age >= 2 and age < 4:
+    print('You are a toddler.')
+elif age >= 4 and age < 13:
+    print('You are a kid.')
+elif age >= 13 and age < 20:
+    print('You are a teenager.')
+elif age >= 20 and age < 65:
+    print('You are an adult.')
+else:
+    print('You are a senior.')
+
+# 5-7
+fruits = ['apple', 'orange', 'grapes','dragon fruit', 'grapefruit']
+if 'apple' in fruits:
+    print('Apples are the best fruit.')
+if 'orange' in fruits:
+    print('Oranges are the second best fruit.')
+if 'grapes' in fruits:
+    print('Grapes are the third best fruit.')
+if 'dragon fruit' in fruits:
+    print('Dragon fruits are the fourth best fruit.')
+if 'grapefruit' in fruits:
+    print('Grapefruits are the worst fruit.')
+
+# 5-8
+users = ['Admin', 'Jordan', 'Quinn', 'Jason', 'Scott', 'Abby']
+if 'Admin' in users:
+    print('Welcome Admin, status report incoming.')
+if 'Jordan' in users:
+    print('Hello Jordan!')
+if 'Quinn' in users:
+    print('Hello Quinn!')
+if 'Jason' in users:
+    print('Hello Jason!')
+if 'Scott' in users:
+    print('Hello Scott!')
+if 'Abby' in users:
+    print('Hello Abby!')
+
+# 5-9
+users = []
+if 'Admin' in users:
+    print('Welcome Admin, status report incoming.')
+else:
+    print('We need to find more users!')
+
+# 5-10
+current_users = ['cyber-kid', 'script-child', 'linux-beast', 'python-man', 'blue-man-group']
+new_users = ['lone-ranger', 'python-man', 'muscle-man', 'hulk-hogan', 'tiger-hoods']
+for new_users in new_users:
+    if new_users in current_users:
+      print('Sorry, you need to create a new username.')
+    else:
+      print('Username created. Welcome!')
+
+# 5-11
+digits = list(range(1, 10))
+for digit in digits:
+    if digit == 1:
+        print('1st')
+    elif digit == 2:
+        print('2nd')
+    elif digit == 3:
+        print('3rd')
+    elif digit == 4:
+        print('4th')
+    elif digit == 5:
+        print('5th')
+    elif digit == 6:
+        print('6th')
+    elif digit == 7:
+        print('7th')
+    elif digit == 8:
+        print('8th')
+    elif digit == 9:
+        print('9th')
+    else:
+        print('Number is not in the list.')
+
+# 5-12
+print('Good to go!')
+
+# 5-13
+game_ideas = ['Canasta', 'Texas Hold Em', 'Craps', 'Solitaire', 'Pick up 52']
+for game in game_ideas:
+    if game == 'Canasta':
+        print('Canasta is a great game! However, it would be a hard one to program.')
+    elif game == 'Texas Hold Em':
+        print("Texas Hold Em is a fun game but I don't know it very well.")
+    elif game == 'Craps':
+        print('My dad programmed a game of craps in a computer class in the 80s so it would be cool to do this too!')
+    elif game == 'Solitaire':
+        print("I love Solitaire but I don't know how it would look in Python.")
+    elif game == 'Pick up 52':
+        print('What a terrible game!')
+
