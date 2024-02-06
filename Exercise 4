@@ -1,0 +1,148 @@
+# EXERCISE 4
+# Question 1
+me = {'first name': 'Cole',
+      'last name': 'Schill',
+      'age': '24',
+      'hometown': 'Sedona, AZ',
+      'current city': 'Anderson, SC',
+      'username': 'C.$ch1lL'
+      }
+print(me)
+print(me['first name'])
+print(me['last name'])
+print(me['age'])
+print(me['hometown'])
+print(me['current city'])
+print(me['username'])
+
+# Question 2
+print(f"This person's full name is {me['first name']} {me['last name']}. He is a {me['age']} year old man from "
+      f"{me['hometown']} but he currently lives in {me['current city']}. His username is {me['username']}.")
+print(f'For security reasons we may ask for his hometown, which is {me['hometown']}, his username, which is '
+      f'{me['username']}, and the password he created.')
+
+# Question 3
+definitions = {'python': 'Python is a high-level, general-purpose programming language.',
+               'variable': 'Variables are like containers that hold values.',
+               'list': 'Lists are used to store multiple items in a single variable.',
+               'method': 'A method is a function that “belongs to” an object.',
+               'if statement': 'An if statement is a condition statement used to check a condition, and execute it if '
+                               'the condition holds true.',
+               'dictionary': 'A dictionary is a kind of data structure that stores items in key-value pairs.',
+               'function': 'A function is a block of code which only runs when it is called. '}
+print(definitions)
+
+# Question 4
+for key, value in definitions.items():
+    print(f'\nKey: {key}')
+    print(f'Value: {value}')
+
+# Question 5
+counties = {'Anderson': 'Anderson',
+            'Greenville': 'Greenville',
+            'Spartanburg': 'Spartanburg',
+            'Oconee': 'Walhalla',
+            'Pickens': 'Pickens',
+            'Lee': 'Bishopville'}
+print(counties)
+
+# Question 6
+counties = {'Anderson': 'Anderson',
+            'Greenville': 'Greenville',
+            'Spartanburg': 'Spartanburg',
+            'Oconee': 'Walhalla',
+            'Pickens': 'Pickens',
+            'Lee': 'Bishopville',
+            'Saluda': 'Saluda',
+            'Aiken': 'Aiken',
+            'Greenwood': 'Greenwood',
+            'Jasper': 'Ridgeland'}
+
+county = ['Anderson', 'Greenville', 'Spartanburg', 'Oconee', 'Pickens', 'Lee', 'Saluda', 'Aiken', 'Greenwood', 'Jasper']
+county_seats = ['Anderson', 'Greenville', 'Spartanburg', 'Walhalla', 'Pickens', 'Bishopville', 'Saluda', 'Aiken',
+                'Greenwood', 'Ridgeland']
+for key, value in counties.items():
+    print(f"{key} is in our list of counties and the county seat is {value}.")
+
+    if key not in counties:
+        print(f'{key} is not in our dictionary. We will add this county soon. Thank you.')
+
+# Question 7
+oconee = {'Pickens': '79,203'},
+lee = {'Bishopville': '16,280'}
+saluda = {'Saluda': '18,821'}
+aiken = {'Aiken': '170,776'}
+jasper = {'Ridgeland': '30,324'}
+
+new_counties = [oconee, lee, saluda, aiken, jasper]
+for counties in new_counties:
+    print(counties)
+
+# Question 8
+sc_counties = {'Anderson': ['Anderson', 'Belton', 'Williamston'],
+               'Greenville': ['Greenville', 'Mauldin', 'Simpsonville'],
+               'Oconee': ['Seneca', 'Walhalla', 'Westminster']
+               }
+for county, cities in sc_counties.items():
+    print(f"In {county.title()}the three largest cities are:")
+    for cities in cities:
+        print(f"{cities.title()}")
+
+# User Input 1
+name = input('Enter name here.')
+print("Hello", name, "!")
+
+# User Input 2
+money = input("How much money do you have currently?")
+
+# User Input 3
+if money < '$149.99':
+    print("Sorry, you don't have enough money.")
+elif money == '$150':
+    print('You can afford the i3!')
+elif money <= '$249.99':
+    print('You can afford the i3!')
+elif money <= '$250':
+    print('You can afford the i5!')
+elif money <= '$349.99':
+    print('You can afford the i5!')
+elif money <= '$349.99':
+    print('You can afford the i7!')
+elif money <= '$449.99':
+    print('You can afford the i7!')
+elif money >= '$450':
+    print('You can afford the i9!')
+else:
+    print("Mistake detected. How much money do you have?")
+
+
+number = input("Input an integer:")
+number_input = int(number)
+even = 0
+odd = 0
+even_sum = 0
+odd_sum = 0
+total = even + odd
+while number_input != 0:
+    number = input("Input an integer:")
+    number_input = int(number)
+    if number_input < 0:
+        number = input("Input an integer greater than 0.")
+    for number_input in number:
+        number_input = int(number)
+
+        if number_input % 2 == 0 and not number_input == 3 and not number_input == 0:
+            even += 1
+            even_sum = even + number_input
+            print('Even')
+        elif not number_input == 0:
+            odd += 1
+            odd_sum = odd + number_input
+            print('Odd')
+
+print("")
+print("odds:", odd_sum)
+print("evens:", even_sum)
+print("count:", even)
+print("count:", odd)
+print("Total:", total)
