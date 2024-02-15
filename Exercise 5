@@ -1,0 +1,213 @@
+# Exercise 5
+# Question 1
+def display_message():
+    """Tell the reader what I'm learning"""
+    print("I am learning how to write functions.")
+
+
+display_message()
+
+
+# Question 2
+def favorite_book(book):
+    """What is my favorite book"""
+    print(f"My favorite book is {book.title()}.")
+
+
+favorite_book('the old man and the sea')
+
+
+# Question 3
+def make_shirt(shirt_size, shirt_print):
+    """Make a shirt"""
+    print(f"Your shirt is a size '{shirt_size}' and it will say '{shirt_print}'.")
+
+
+make_shirt('Medium', 'I Love New York!')
+make_shirt(shirt_size='Large', shirt_print='Hello!')
+
+
+# Question 4
+def make_shirt(shirt_size='Large', shirt_print='I love Python!'):
+    """This will make a Large Python shirt"""
+    print(f"This shirt is a size '{shirt_size}' and it will say '{shirt_print}'.")
+
+
+make_shirt()
+make_shirt('Medium')
+make_shirt('XL', 'My name is Cole')
+
+
+# Question 5
+def describe_city(city, country='United States'):
+    """These are cool cities"""
+    print(f"My favorite city is {city}. It is in {country}.")
+
+
+describe_city('New York')
+describe_city('Greenville')
+describe_city('Sydney', 'Australia')
+
+
+# Question 6
+def city_country(city, country):
+    """This is a cool city"""
+    return f"{city}, {country}"
+
+
+city = city_country('Frankfurt', 'Germany')
+print(city)
+city = city_country('Paris', 'France')
+print(city)
+city = city_country('London', 'England')
+print(city)
+
+
+# Question 7
+def make_album(musician, song):
+    """These are good songs"""
+    album_dictionary = {
+        'Musician': musician.title(),
+        'Song': song.title()
+    }
+    return album_dictionary
+
+
+album = make_album('the lumineers', 'cleopatra')
+print(album)
+album = make_album('j. cole', '2014 forrest hills drive')
+print(album)
+album = make_album('adele', '30')
+print(album)
+
+
+# Question 8
+def make_album(musician, song):
+    """These are good songs"""
+    album_dictionary = {
+        'Musician': musician.title(),
+        'Song': song.title()
+    }
+    return album_dictionary
+
+
+what_musician = "What musician would you like to hear?"
+what_song = 'What song would you like to hear from that artist?'
+
+print('Enter stop at any time to stop the search.')
+
+while True:
+    musician = input(what_musician)
+    if musician == 'stop':
+        break
+
+    song = input(what_song)
+    if song == 'stop':
+        break
+
+    album = make_album(musician, song)
+    print(album)
+
+
+# Question 9
+def show_messages(messages):
+    """Print some messages"""
+    for message in messages:
+        print(message)
+
+
+messages = (['Howdy pardner!', "There's a snake in my boot!", "My name's Woody. Nice to meet you!"])
+show_messages(messages)
+
+
+# Question 10
+def show_messages(messages):
+    """These messages are in the list."""
+    print("These messages are in the list:")
+    for message in messages:
+        print(message)
+
+
+def send_messages(messages, sent_messages):
+    """These are the sent messages."""
+    print("\n Sent messages are:")
+    while messages:
+        new_message = messages.pop()
+        print(new_message)
+        sent_messages.append(new_message)
+
+
+messages = ['Howdy pardner!', "There's a snake in my boot!", "My name's Woody. Nice to meet you!"]
+show_messages(messages)
+
+sent_messages = []
+send_messages(messages, sent_messages)
+
+print(messages)
+print(sent_messages)
+
+# Question 11
+def show_messages(messages):
+    """These messages are in the list."""
+    print("These messages are in the list:")
+    for message in messages:
+        print(message)
+
+
+def send_messages(messages, sent_messages):
+    """These are the sent messages."""
+    print("\n Sent messages are:")
+    while messages:
+        new_message = messages.pop()
+        print(new_message)
+        sent_messages.append(new_message)
+
+
+messages = ['Howdy pardner!', "There's a snake in my boot!", "My name's Woody. Nice to meet you!"]
+show_messages(messages)
+
+sent_messages = []
+send_messages(messages[:], sent_messages)
+
+print(messages)
+print(sent_messages)
+
+# Question 12
+def make_sandwich(*items):
+    print("The ingredients for the best sandwich are:")
+    for item in items:
+        print(f"{item}")
+    print('Done! Enjoy the best sandwich in the world!')
+
+
+make_sandwich('steak', 'peppers', 'onions', 'cheese')
+make_sandwich('ham', 'turkey', 'roast beef', 'cheese', 'lettuce', 'tomato')
+make_sandwich('pepperoni', 'salami', 'ham', 'prosciutto', 'cheese', 'lettuce', 'tomato', 'oil and vinegar')
+
+# Question 13
+def build_profile(first, last, **user_info):
+    """Build a dictionary containing everything we know about a user."""
+    user_info['first_name'] = first
+    user_info['last_name'] = last
+    return user_info
+
+
+user_profile = build_profile('Cole', 'Schill',
+                             location='Anderson',
+                             field='cybersecurity')
+print(user_profile)
+
+# Question 14
+def car_maker(make, model, **extras):
+    """This is my car"""
+    car_dictionary = {'make': make.title(),
+                      'model': model.title()}
+    for extras, value in extras.items():
+        car_dictionary[extras] = value
+
+    return car_dictionary
+
+
+camaro = car_maker('camaro', 'chevrolet', color='blue', v6=True)
+print(camaro)
+
