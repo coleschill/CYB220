@@ -1,0 +1,554 @@
+# Exercise 6
+# Question 1
+class Restaurant:
+    """This is my restaurant."""
+
+    def __init__(self, restaurant_name, food_type):
+        """Initialize restaurant."""
+        self.restaurant_name = restaurant_name.title()
+        self.food_type = food_type.title()
+
+    def describe_restaurant(self):
+        """Describe restaurant."""
+        message = self.restaurant_name + " is great for " + self.food_type + "."
+        print(message)
+
+    def open_restaurant(self):
+        """Restaurant is now open."""
+        message = self.restaurant_name + " is now open. Come on in!"
+        print(message)
+
+
+restaurant = Restaurant('chicken coles', 'nashville hot chicken')
+print(restaurant.restaurant_name)
+print(restaurant.food_type)
+
+restaurant.describe_restaurant()
+restaurant.open_restaurant()
+
+
+# Question 2
+class Restaurant:
+    """My restaurant."""
+
+    def __init__(self, restaurant_name, food_type):
+        """Initialize restaurant."""
+        self.restaurant_name = restaurant_name.title()
+        self.food_type = food_type.title()
+
+    def describe_restaurant(self):
+        """Describe restaurant."""
+        message = self.restaurant_name + " is great for " + self.food_type + "."
+        print(message)
+
+    def open_restaurant(self):
+        """Restaurant is now open."""
+        message = self.restaurant_name + " is now open. Come on in!"
+        print(message)
+
+
+sushi = Restaurant('schills sushi', 'sushi')
+sushi.describe_restaurant()
+
+creamery = Restaurant("coles creamery", 'ice cream')
+creamery.describe_restaurant()
+
+pub = Restaurant('schills irish pub', 'irish food and guinness')
+pub.describe_restaurant()
+
+
+# Question 3
+class User:
+    """User profiles."""
+
+    def __init__(self, first_name, last_name, username, email, location):
+        """Initialize user."""
+        self.first_name = first_name.title()
+        self.last_name = last_name.title()
+        self.username = username
+        self.email = email
+        self.location = location.title()
+
+    def describe_user(self):
+        """User's info."""
+        print("\n" + self.first_name + " " + self.last_name)
+        print("  Username: " + self.username)
+        print("  Email: " + self.email)
+        print("  Location: " + self.location)
+
+    def greet_user(self):
+        """Message to the user."""
+        print("\nHowdy there, " + self.username + "!")
+
+
+me = User('cole', 'schill', 'cole_schill.77', 'cole_schill.77@yahoo.com', 'anderson')
+me.describe_user()
+me.greet_user()
+
+bp = User('brad', 'pitt', 'moneyball_man', 'brad.pitt@moneyball.com', 'los angeles')
+bp.describe_user()
+bp.greet_user()
+
+
+# Question 4
+class Restaurant:
+    """My restaurant."""
+
+    def __init__(self, restaurant_name, food_type):
+        """Initialize the restaurant."""
+        self.restaurant_name = restaurant_name.title()
+        self.food_type = food_type.title()
+        self.people_served = 1
+
+    def describe_restaurant(self):
+        """Describe restaurant."""
+        message = self.restaurant_name + " is great for " + self.food_type + "."
+        print(message)
+
+    def open_restaurant(self):
+        """Restaurant is now open."""
+        message = self.restaurant_name + " is now open. Come on in!"
+        print(message)
+
+    def base_number_served(self, people_served):
+        """Base number of people served."""
+        self.people_served = people_served
+
+    def other_number_served(self, others_served):
+        """Total number of people served."""
+        self.people_served += others_served
+
+
+restaurant = Restaurant('schills sushi', 'sushi')
+restaurant.describe_restaurant()
+
+print("\nNumber served is now: " + str(restaurant.people_served))
+restaurant.people_served = 201
+print("Number served is now: " + str(restaurant.people_served))
+
+restaurant.base_number_served(865)
+print("Number served is now: " + str(restaurant.people_served))
+
+restaurant.other_number_served(468)
+print("Number served is now: " + str(restaurant.people_served))
+
+
+# Question 5
+class User:
+    """User profiles."""
+
+    def __init__(self, first_name, last_name, username, email, location):
+        """Initialize user."""
+        self.first_name = first_name.title()
+        self.last_name = last_name.title()
+        self.username = username
+        self.email = email
+        self.location = location.title()
+        self.login_attempts = 0
+
+    def describe_user(self):
+        """Users info."""
+        print("\n" + self.first_name + " " + self.last_name)
+        print("  Username: " + self.username)
+        print("  Email: " + self.email)
+        print("  Location: " + self.location)
+
+    def greet_user(self):
+        """Message to the user."""
+        print("\nHowdy there, " + self.username + "!")
+
+    def total_login_attempts(self):
+        """Total number of login attempts."""
+        self.login_attempts += 1
+
+    def reset_login_attempts(self):
+        """Reset attempts."""
+        self.login_attempts = 0
+
+
+me = User('cole', 'schill', 'cole_schill.77', 'cole_schill.77@yahoo.com', 'anderson')
+me.describe_user()
+me.greet_user()
+
+print("\nMaking 3 login attempts...")
+me.total_login_attempts()
+me.total_login_attempts()
+me.total_login_attempts()
+print("  Login attempts: " + str(me.login_attempts))
+
+print("Resetting login attempts...")
+me.reset_login_attempts()
+print("  Login attempts: " + str(me.login_attempts))
+
+
+# Question 6
+class Restaurant:
+    """My restaurant."""
+
+    def __init__(self, restaurant_name, food_type):
+        """Initialize the restaurant."""
+        self.restaurant_name = restaurant_name.title()
+        self.food_type = food_type.title()
+        self.people_served = 1
+
+    def describe_restaurant(self):
+        """Describe restaurant."""
+        message = self.restaurant_name + " is great for " + self.food_type + "."
+        print(message)
+
+    def open_restaurant(self):
+        """Restaurant is now open."""
+        message = self.restaurant_name + " is now open. Come on in!"
+        print(message)
+
+    def base_number_served(self, people_served):
+        """Base number of people served."""
+        self.people_served = people_served
+
+    def other_number_served(self, others_served):
+        """Total number of people served."""
+        self.people_served += others_served
+
+
+class SchillsSushi(Restaurant):
+    """My sushi restaurant."""
+
+    def __init__(self, restaurant_name, food_type='sushi'):
+        """Initialize Schills Sushi."""
+        super().__init__(restaurant_name, food_type)
+        self.types = ['California Rolls', 'Spicy Tuna Roll', 'Alaskan Trout Roll', 'Sashimi', 'Uramaki', 'Chirashi']
+
+    def sushi_types(self):
+        """Types available."""
+        print("\nThis is the sushi that we offer:")
+        for type in self.types:
+            print(type)
+
+
+schills_sushi = SchillsSushi('Schills Sushi')
+schills_sushi.types = ['California Rolls', 'Spicy Tuna Roll', 'Alaskan Trout Roll', 'Sashimi', 'Uramaki', 'Chirashi']
+
+schills_sushi.describe_restaurant()
+schills_sushi.sushi_types()
+
+
+# Question 9
+class Car:
+    """My car."""
+
+    def __init__(self, make, model, year):
+        """Initialize my car."""
+        self.make = make
+        self.model = model
+        self.year = year
+        self.odometer_reading = 0
+
+    def get_car_name(self):
+        """My cars name."""
+        full_name = str(self.year) + ' ' + self.make + ' ' + self.model
+        return full_name.title()
+
+    def odometer(self):
+        """Car mileage."""
+        print("My car has " + str(self.odometer_reading) + " miles on it.")
+
+    def new_odometer(self, mileage):
+        """New odometer reading"""
+        if mileage >= self.odometer_reading:
+            self.odometer_reading = mileage
+        else:
+            print("You can't roll back an odometer.")
+
+    def current_odometer(self, miles):
+        """Current odometer reading."""
+        self.odometer_reading += miles
+
+
+class Battery:
+    """Battery reading."""
+
+    def __init__(self, battery_size=50):
+        """Initialize battery.."""
+        self.battery_size = battery_size
+
+    def describe_battery(self):
+        """Battery size."""
+        print("This car has a " + str(self.battery_size) + "-kh battery.")
+
+    def battery_range(self):
+        """Battery range."""
+        if self.battery_size == 50:
+            battery_range = 150
+        elif self.battery_size == 100:
+            battery_range = 200
+
+        message = "This car has a range of " + str(range) + " miles on a full charge."
+        print(message)
+
+    def upgrade_battery(self):
+        """Upgrade battery."""
+        if self.battery_size == 50:
+            self.battery_size = 100
+            print("We upgraded the battery to 100 kh.")
+        else:
+            print("The battery has been upgraded.")
+
+
+class ElectricCar(Car):
+    """Electric vehicles."""
+
+    def __init__(self, make, model, year):
+        """Electric vehicles."""
+        super().__init__(make, model, year)
+        self.battery = Battery()
+
+
+print("Make an electric car, and check the battery:")
+my_prius = ElectricCar('toyota', 'prius', 2010)
+my_prius.battery.describe_battery()
+
+print("\nUpgrade the battery, and check it again:")
+my_prius.battery.upgrade_battery()
+my_prius.battery.describe_battery()
+
+print("\nTry upgrading the battery a second time.")
+my_prius.battery.upgrade_battery()
+my_prius.battery.describe_battery()
+
+# Question 1
+from pathlib import Path
+
+print("--- The file says:")
+path = Path('learning_python.txt')
+contents = path.read_text()
+print(contents)
+
+print("\n--- Looping through the lines:")
+lines = contents.splitlines()
+for line in lines:
+    print(line)
+
+# Question 2
+from pathlib import Path
+
+path = Path('things_learned.txt')
+contents = path.read_text()
+
+lines = contents.splitlines()
+for line in lines:
+    line = line.replace('tired', 'hungry')
+    print(line)
+
+# Question 4
+from pathlib import Path
+
+path = Path('guest.txt')
+
+name = input("What's your name? ")
+path.write_text(name)
+
+# Question 5
+from pathlib import Path
+
+path = Path('guest_book.txt')
+
+prompt = "Hi, what's your name? "
+prompt += "\nEnter 'quit' if you're the last guest. "
+
+guest_names = []
+while True:
+    name = input(prompt)
+    if name == 'quit':
+        break
+
+    print(f"Thanks {name}, you will be added to the guest list.")
+    guest_names.append(name)
+
+
+file_string = ''
+for name in guest_names:
+    file_string += f"{name}\n"
+
+path.write_text(file_string)
+
+# Question 6
+try:
+    x = input("Input a number: ")
+    x = int(x)
+
+    y = input("Input another number: ")
+    y = int(y)
+except ValueError:
+    print("Sorry, input a different number.")
+else:
+    sum = x + y
+    print(f"The sum of {x} and {y} is {sum}.")
+
+# Question 7
+print("Enter 'q' at any time to quit.\n")
+
+while True:
+    try:
+        x = input("Give me a number: ")
+        if x == 'q':
+            break
+
+        x = int(x)
+
+        y = input("Give me another number: ")
+        if y == 'q':
+            break
+
+        y = int(y)
+
+    except ValueError:
+        print("Sorry, I really needed a number.")
+
+    else:
+        sum = x + y
+        print(f"The sum of {x} and {y} is {sum}.")
+
+# Question 8
+from pathlib import Path
+
+filenames = ['cat.txt', 'dogs.txt']
+
+for filename in filenames:
+    print(f"This file says: {filename}")
+
+    path = Path(filename)
+    try:
+        contents = path.read_text()
+    except FileNotFoundError:
+        print("  Sorry, we can't find that file.")
+    else:
+        print(contents)
+
+# Question 11
+from pathlib import Path
+import json
+
+number = input("What's your favorite number? ")
+
+path = Path('favorite_number.json')
+contents = json.dumps(number)
+path.write_text(contents)
+
+print("I'll remember that number.")
+
+# Question 11.2
+from pathlib import Path
+import json
+
+path = Path('favorite_number.json')
+contents = path.read_text()
+number = json.loads(contents)
+
+print(f"I know your favorite number! It's {number}.")
+
+# Question 12
+from pathlib import Path
+import json
+
+path = Path('favorite_number.json')
+try:
+    contents = path.read_text()
+except FileNotFoundError:
+    number = input("What's your favorite number? ")
+    contents = json.dumps(number)
+    path.write_text(contents)
+    print("Thanks, I'll remember that.")
+else:
+    number = json.loads(contents)
+    print(f"I know your favorite number! It's {number}.")
+    
+# Question 13
+from pathlib import Path
+import json
+
+
+def user_info(path):
+    """User info."""
+    if path.exists():
+        contents = path.read_text()
+        user_dict = json.loads(contents)
+        return user_dict
+    else:
+        return None
+
+
+def new_user_info(path):
+    """New user info."""
+    username = input("What's your name? ")
+    game = input("What's your favorite game? ")
+    animal = input("What's your favorite animal? ")
+
+    user_dict = {
+        'username': username,
+        'game': game,
+        'animal': animal,
+    }
+
+    contents = json.dumps(user_dict)
+    path.write_text(contents)
+    return user_dict
+
+
+def greet_user():
+    """Greet the user."""
+    path = Path('user_info.json')
+    user_dict = user_info(path)
+    if user_dict:
+        print(f"Welcome back, {user_dict['username']}!")
+        print(f"Hope you've been playing some {user_dict['game']}. ")
+        print(f"Have you seen a {user_dict['animal']} recently?")
+    else:
+        user_dict = new_user_info(path)
+        message = f"We'll remember you, {user_dict['username']}!"
+        print(message)
+
+
+greet_user()
+
+# Question 14
+from pathlib import Path
+import json
+
+
+def current_username(path):
+    """My username."""
+    if path.exists():
+        contents = path.read_text()
+        username = json.loads(contents)
+        return username
+    else:
+        return None
+
+
+def new_username(path):
+    """New username."""
+    username = input("What is your name? ")
+    contents = json.dumps(username)
+    path.write_text(contents)
+    return username
+
+
+def greet_user():
+    """Greet user."""
+    path = Path('username.json')
+    username = current_username(path)
+    if username:
+        correct = input(f"Hi, are you {username}? (y/n) ")
+        if correct == 'y':
+            print(f"Welcome back, {username}!")
+        else:
+            username = new_username(path)
+            print(f"We'll remember you, {username}!")
+    else:
+        username = new_username(path)
+        print(f"We'll remember you, {username}!")
+
+
+greet_user()
+
+
