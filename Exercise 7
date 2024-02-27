@@ -1,0 +1,26 @@
+# Exercise 7
+import os
+import shutil
+
+
+def copy_files(original, new_path):
+    if not os.path.exists(original):
+        print(f"Source directory '{original}' does not exist.")
+        return
+
+    if not os.path.exists(new_path):
+        os.makedirs(new_path)
+
+    for filename in os.listdir(original):
+        original_file = os.path.join(original, filename)
+        new_path_file = os.path.join(new_path, filename)
+
+        if os.path.isfile(original_file):
+            shutil.copy2(original_file, new_path_file)
+            print(f"We have copied '{original_file}' to '{new_path_file}'")
+
+
+if __name__ == "__main__":
+    original_directory = "Exercise 7"
+    new_directory = "test"
+    copy_files(original_directory, new_directory)
