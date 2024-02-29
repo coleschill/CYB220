@@ -1,0 +1,26 @@
+# Python Project 1
+import requests
+
+# These are the currencies that we are converting
+currencies = ['EUR', 'AUD', 'BGN', 'BRL', 'CAD', 'CHF', 'CNY', 'CZK', 'DKK', 'GBP', 'HKD', 'HUF', 'IDR', 'ILD', 'INR',
+              'ISK', 'JPY', 'KRW', 'MXN', 'MYR', 'NOK', 'NZD', 'PHP', 'PLN', 'RON', 'SEK', 'SGD', 'THB', 'TRY', 'USD',
+              'ZAR']
+currencies_str = f"Our system only prints these currencies: {currencies}."
+print(currencies_str)
+# We need a string to ask the user what currency they want to convert
+from_currency = str(input("Please enter the type of currency you want to convert from: ")).upper()
+# We need a string to ask the user what currency they want to convert to
+to_currency = str(input("Please input the type of currency you want to convert to: ")).upper()
+# We need to ask how much the user wants to convert
+amount = float(input("Please enter the amount of money you would like to convert: "))
+# Make the API(application programming interface) request
+url = f"https://api.frankfurter.app/latest?amount={amount}&from={from_currency}&to={to_currency}"
+response = requests.get(url)
+# We need to have a check to see if the request was successful, and we need to print out our converted amount
+if response.status_code == 200:
+    conversion_result = response.json()['rates'][to_currency]
+    print(f"{amount} {from_currency} is {conversion_result} {to_currency}")
+else:
+    print(f"Failed to convert currency. Status code: {response.status_code}")
+
+# This code was made by Cole Schill, student at Anderson University
